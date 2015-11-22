@@ -22,7 +22,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
  $('#juagar').on('tap', function(){
 
     elementoEncontrar = Math.floor((Math.random() * 118) + 1);
-	  db.transaction(function(tx) {
+	alert (elementoEncontrar);
+  db.transaction(function(tx) {
         tx.executeSql("select numeroAtomico, nombreElemento from Elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
         });
