@@ -31,10 +31,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
             transition: 'pop'
 			}); 
-  $("#quien").popup({
-  positionTo: "window"
-});
+			
+			$( "#juego" ).on( "pagecontainerbeforeshow", function( event, ui ) {				
+				  $("#quien").popup();
   $("#quien").popup("open");	 
+				} );
+
 
 
  });
