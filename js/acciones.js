@@ -31,7 +31,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
             transition: 'pop'
 			}); 
-  $("#quien").popup();
+  $("#quien").popup({
+  positionTo: "window"
+});
   $("#quien").popup("open");	 
 
 
