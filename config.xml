@@ -2,23 +2,23 @@
  <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->  
  <widget xmlns   = "http://www.w3.org/ns/widgets"  
      xmlns:gap = "http://phonegap.com/ns/1.0"  
-     id    = "com.phonegap.Bullying"  
+     id    = "com.phonegap.QuimicaQuiz"  
      version  = "2.0.0">  
 	 
-   <name> Encuesta Bullying </name>  
+   <name> Quimica Quiz </name>  
    
    <description>  
-     Encuesta sobre Bullying
+     Aprende los elementos
    </description>  
    
    <author href="https://build.phonegap.com" email="micorreo@gmail.com">  
-       Francisco Jose Couto Pelaez
+       ICEon
    </author>  
    
    <!-- Personaliza la aplicacion y plataforma  -->  
   <preference name="phonegap-version" value="3.7.0" />
 
-  <preference name="orientation" value="landscape" />
+
 
 
    <preference name="orientation"        value="portrait" />    
@@ -26,7 +26,7 @@
    <preference name="fullscreen"         value="true" />      
    <preference name="android-installLocation"  value="auto" />  
    <preference name="SplashScreen" value="splash"/>
-   <preference name="SplashScreenDelay" value="1500"/>
+   <preference name="SplashScreenDelay" value="1000"/>
 
    <!-- Plugins -->  
    <!-- Core plugins -->  
