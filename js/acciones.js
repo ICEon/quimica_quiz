@@ -19,7 +19,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	 
  conectar_base();
 
- $('#juagar').on('tap', function(){
+ $('#btnjugar').on('tap', function(){
 
     elementoEncontrar = Math.floor((Math.random() * 118) + 1);
 	alert (elementoEncontrar);
