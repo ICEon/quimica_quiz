@@ -35,7 +35,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 				  $("#quien").popup();
   $("#quien").popup("open",{transition: "flip"});	 
-alert ($( "#quien" ).popup( "option", "positionTo" ));
+  $( "#quien" ).on( "popupafteropen", function( event, ui ) {alert ($( "#quien" ).popup( "option", "positionTo" ));} );
+
 
 
 
