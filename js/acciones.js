@@ -28,21 +28,28 @@ document.addEventListener("deviceready", onDeviceReady, false);
 			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
         });
       });
-	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
+	//$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
             transition: 'pop'
 			}); 
-			
 
-				  $("#quien").popup();
+$( "#juego" ).pagecontainer({
+  change: function( event, ui ) {
+	  		  $("#quien").popup();
   $("#quien").popup("open",{transition: "flip"});	 
-  $( "#quien" ).on( "popupafteropen", function( event, ui ) {alert ($( "#quien" ).popup( "option", "positionTo" ));} );
+	  
+	  }
+  
+});			
+
+		
+//  $( "#quien" ).on( "popupafteropen", function( event, ui ) {alert ($( "#quien" ).popup( "option", "positionTo" ));} );
 
 
 
 
 
 
- });
+ //});
  
  
  }
