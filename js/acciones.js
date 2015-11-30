@@ -15,6 +15,17 @@ function conectar_base()
 $(document).ready(function(e) {
 	
 document.addEventListener("deviceready", onDeviceReady, false);
+
+$('#bnterror').on('tap', function(){
+  $("#quien").popup("close");
+  $('#error').popup('open');   		
+});
+
+$('#btnacierto').on('tap', function(){
+	  $("#quien").popup("close");
+  $('#acierto').popup('open');   		
+});
+
  function onDeviceReady() {
 	 
  conectar_base();
@@ -46,6 +57,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
  
  
  }
+
+
 
 
 });
