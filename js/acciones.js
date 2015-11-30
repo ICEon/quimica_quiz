@@ -22,7 +22,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
  $('#btnjugar').on('tap', function(){
 
     elementoEncontrar = Math.floor((Math.random() * 118) + 1);
-	alert (elementoEncontrar);
+//	alert (elementoEncontrar);
   db.transaction(function(tx) {
         tx.executeSql("select numeroAtomico, nombreElemento from Elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
@@ -32,9 +32,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
             transition: 'pop'
 			}); 
 			
-
-				  $("#quien").popup();
+    $('#juego').on('load', function (){
+						  $("#quien").popup();
   $("#quien").popup("open",{transition: "flip"});	 
+	});
+
 
 
 
