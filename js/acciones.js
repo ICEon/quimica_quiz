@@ -32,7 +32,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
             transition: 'pop'
 			}); 
 			
-    $('#juego').on('load', function (){
+    $('#juego').on('show', function (){
 						  $("#quien").popup();
   $("#quien").popup("open",{transition: "flip"});	 
 	});
