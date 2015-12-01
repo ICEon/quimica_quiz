@@ -31,7 +31,7 @@ $('#btnacierto').on('tap', function(){
  conectar_base();
 
  $('#btnjugar').on('tap', function(){
-
+					  $("#quien").popup();
     elementoEncontrar = Math.floor((Math.random() * 118) + 1);
 //	alert (elementoEncontrar);
   db.transaction(function(tx) {
@@ -44,7 +44,7 @@ $('#btnacierto').on('tap', function(){
 			}); 
 			
 
-						  $("#quien").popup();
+
   $("#quien").popup("open",{transition: "flip"});	 
 
 
