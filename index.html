@@ -46,19 +46,25 @@
   <div data-role="main" class="ui-content">
 
     <div data-role="popup" id="quien" data-overlay-theme="a" data-theme="b" data-dismissible="false">
+    
       <div data-role="header" data-theme="a">
-        <h1 style=" margin:1px 20px 1px;">Selecciona el simbolo del elemento:</h1>
+        <h1 style=" margin:1px 20px 1px;">Selecciona el simbolo del:</h1>
       </div>
 
-      <div data-role="main" class="ui-content">
+      <div data-role="main" class="ui-content" data-theme="b">
        <div align="center">
         <h1 id="elementoEncontrar">&nbsp;</h1>
        </div>
        <div align="center">
-        <a href="#" class="ui-btn ui-btn-corner-all ui-shadow ui-icon-delete ui-btn-icon-left" id="bnterror">Salir</a>
-        <a href="#" class="ui-btn ui-btn-corner-all ui-shadow ui-icon-check ui-btn-iceon-right" id ="btnacierto">Aceptar</a>
+        <a href="#" class="ui-btn ui-btn-corner-all ui-shadow ui-icon-delete ui-btn-icon-right" id="bnterror">Salir</a>
+        <a href="#" class="ui-btn ui-btn-corner-all ui-shadow ui-icon-check ui-btn-icon-right" id ="btnacierto">Aceptar</a>
        </div>
-      </div>
+       
+       </div> 
+       <div data-role="footer" data-theme="a">
+        Elementos encontrados: <span id='encontrados'>0</span>
+       </div>
+
     </div>
     
    <div data-role="popup" id="error" data-overlay-theme="a" data-theme="b" data-dismissible="false">
