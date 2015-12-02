@@ -42,30 +42,28 @@
  <div data-role="page" id="juego">
   <div data-role="main" class="ui-content"> 
     
-   <div data-role="popup" id="quien" data-overlay-theme="a" data-theme="b" data-dismissible="false">
-    <div data-role="header" data-theme="a">
-     <h1 style=" margin:1px 20px 1px;">Selecciona una opcion</h1>
-    </div>
+ <div data-role="popup" id="quien" data-overlay-theme="a" data-theme="b" data-dismissible="false">
+  <div data-role="header" data-theme="b">
+  <h1 style="margin:1px 20px 1px;">Selecciona el simbolo del:</h1>
+  </div> 
 
-    <div data-role="main" class="ui-content">
-     <div align="center">
-      <p class="oculta" id="sindatos">No hay datos que guardar o mostrar</p>
-      <div align="center" id="opcionesE">
-      Exportar <i class="ion-android-archive icono-mediano" id="exportar"></i>
-      <i class="ion-stats-bars icono-mediano" id="resultados"></i>Estadistica
-     </div>
-     <br>
-     <div align="center">
-      <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-delete" data-rel="back" >Cerrar</a>          
-     </div>
-    </div>
+  <div data-role="main" class="ui-content">
+   <div align="center">
+    <p id="elementoEncontrar">&nbsp;</p>
+    <div align="center">
+     <a href="#" class="ui-btn ui-btn-corner-all ui-shadow ui-mini" id="btnsalir" style="display:inline-block">Salir<i class="ion-close-circled icono-mediano" id="exportar"></i></a>
+     <a href="#" class="ui-btn ui-btn-corner-all ui-shadow ui-mini" id="btncontinuar" style="display:inline-block"><i class="ion-ionic icono-mediano" id="exportar"></i>Aceptar</a>
+    </div>       
    </div>
   </div>
-    
-   <div align="center" id="arriba">
-       <i class="ion-man icono-grande sexo-h"></i>
-       <i class="ion-woman icono-grande sexo-m"></i>
+      
+  <div data-role="footer" data-theme="a">
+   <div align="center">
+    Elementos encontrados: <span id='encontrados'>0</span>
    </div>
+  </div>
+ </div>
+
        
   </div>
  </div>  
