@@ -55,9 +55,10 @@ $('#btnacierto').on('tap', function(){
  $('#btnjugar').on('tap', function(){
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
- 
+
    db.transaction(function(tx) {
         tx.executeSql("select numeroAtomico, nombreElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
+			alert (elementoEncontrar); 
 			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
 			
         });
