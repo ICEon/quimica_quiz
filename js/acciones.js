@@ -19,6 +19,12 @@ var aciertos = 0;
 var db;
 var otroElemento1 = 0;
 var otroElemento2 = 0;
+
+var opcionesJSON = '{"opcion": [ {"uno":"uno", "dos":"dos","tres":"tres"},{"uno":"uno", "dos":"tres","tres":"dos"},{"uno":"dos", "dos":"tres","tres":"uno"},{"uno":"dos", "dos":"uno","tres":"tres"},{"uno":"tres", "dos":"uno","tres":"dos"},{"uno":"tres", "dos":"dos","tres":"uno"}]]';
+
+var azar = JSON.parse(opcionesJSON);
+
+
 //*************************
 
 
@@ -61,7 +67,7 @@ $('#btnacierto').on('tap', function(){
 			}); 
 	
 //  $("#quien").popup("open",{transition: "flip"});
-  donde = Math.floor((Math.random() * 3) + 1);
+  donde = Math.floor((Math.random() * 6) + 1);
   
 /*  do 
    {
@@ -72,18 +78,20 @@ $('#btnacierto').on('tap', function(){
   */
    
     otrosElementos();  
+    
    alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
 
    db.transaction(function(tx) {
         tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
-			$("#uno").html(res.rows.item(0).simboloElemento);
+			
+			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
 			
         });
       });
 
    db.transaction(function(tx) {
         tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento1 + ";", [], function(tx, res) {
-			$("#dos").html(res.rows.item(0).simboloElemento);
+			$("#" + azar.opcion[donde].dos).html(res.rows.item(0).simboloElemento);
 			
         });
       });
@@ -91,7 +99,7 @@ $('#btnacierto').on('tap', function(){
 
    db.transaction(function(tx) {
         tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento2 + ";", [], function(tx, res) {
-			$("#tres").html(res.rows.item(0).simboloElemento);
+			$("#" + azar.opcion[donde].tres).html(res.rows.item(0).simboloElemento);
 			
         });
       });
