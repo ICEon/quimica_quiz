@@ -24,8 +24,24 @@
 
  <body>
  
- <!-- Principal -->
-<div data-role="page" id="principal">   
+  <!-- Principal -->
+ <div data-role="page" id="principal" >   
+  <div data-role="header" data-position="fixed" data-tap-toggle="false">
+    <div id="titulo">
+     Tabla Periodica
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+   <a href="#" class="ui-btn ui-icon-star ui-btn-corner-all ui-btn-icon-right" id="btnjugar">Jugar</a>
+  </div>  
+ </div>
+ <!-- Principal --> 
+
+
+
+<!-- juego -->
+<div data-role="page" id="juego">   
   <div data-role="main" class="ui-content" id="tablero" >
    <div  class="adivinar" style=" position:absolute;background-color:#666; float:right; z-index:5;">
      <h1>Elemnto</h1>
@@ -56,19 +72,8 @@
  
 
 </div>
-<!-- Principal --> 
+<!-- juego --> 
 
-<div data-role="page" id="prin" >   
-  <div data-role="main" class="ui-content" id="tab">
-   <hr>
-   <br>
-   <br>
-</div>
-<div data-role="footer">
- <div>
-  <a href="#" class="ui-btn">Hola </a>
- </div>
-</div>
-</div>
+
  </body>
 </html> 
