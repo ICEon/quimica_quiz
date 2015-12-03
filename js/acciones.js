@@ -124,7 +124,7 @@ function otrosElementos()
   $('#dos').css('top', $('#dos').position().top -10);
   $("#tablero span")
   //.css({top:0,position:'relative'})
-  .animate({top: alto*.78}, velocidad, function() {
+  .animate({top: alto*.50}, velocidad, function() {
   });
 
  });
