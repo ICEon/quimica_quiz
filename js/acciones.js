@@ -8,7 +8,7 @@ $(document).ready(function(e) {
 	$('.boton').css('height', ancho*.20);
     $('.boton').css('font-size', ancho*.15);
 	$('.carril').css('width', ancho*.20);
-    $('.carril').css('height', alto*.75);
+    $('.carril').css('height', alto*.80);
 	$('.adivinar').css('height', ancho*.20);
 	
     	
