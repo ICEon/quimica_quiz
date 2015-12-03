@@ -68,7 +68,7 @@ $('#btnacierto').on('tap', function(){
 	
 //  $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
-  
+  alert (donde + "," + azar.opcion[donde].uno);
 /*  do 
    {
 	 otrosElementos();  
