@@ -1,9 +1,9 @@
 // JavaScript Document
  
 $(document).ready(function(e) {
-	ancho = $('#principal').width();	 
-	alto = $('body').height();	
-    velocidad = 2000 -(alto*.4);
+var	ancho = $('#principal').width();	 
+var	alto = $('body').height();	
+var    velocidad = 2400 -(alto*.4);
     $('.boton').css('width', ancho*.20);
 	$('.boton').css('height', ancho*.20);
     $('.boton').css('font-size', ancho*.15);
@@ -11,13 +11,14 @@ $(document).ready(function(e) {
     $('.carril').css('height', alto*.80);
 	$('.adivinar').css('height', ancho*.20);    	
     $('#tablero span').css('font-size', ancho*.11);
-	alto_footer = $('#comandos').height();	
+var	alto_footer = $('#comandos').height();	
     //alert (alto + "footer " + alto_footer);
 
 var elementoEncontrar = 0;
 var aciertos = 0;
 var db;
-
+var otroElemento1 = 0;
+var otroElemento2 = 0;
 //*************************
 
 
@@ -59,11 +60,30 @@ $('#btnacierto').on('tap', function(){
 			}); 
 	
   $("#quien").popup("open",{transition: "flip"});
+  donde = Math.floor((Math.random() * 3) + 1);
+  
+  do 
+   {
+	 otrosElementos();  
+   }
+   
+   while (!((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)))
+   
+   alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
+   
+
+  
+  
  });
  
  
  }
 
+function otrosElementos()
+ {
+	otroElemento1 = Math.floor((Math.random() * 118) + 1);
+	otroElemento2 = Math.floor((Math.random() * 118) + 1);
+ }
 
  $('.boton').on('tap', function(){
   //	alert (velocidad); 	 
