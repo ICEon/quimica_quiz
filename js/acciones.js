@@ -63,13 +63,15 @@ $('#btnacierto').on('tap', function(){
 //  $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 3) + 1);
   
-  do 
+/*  do 
    {
 	 otrosElementos();  
    }
    
    while (!((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)))
+  */
    
+    otrosElementos();  
    alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
 
    db.transaction(function(tx) {
@@ -100,8 +102,6 @@ $('#btnacierto').on('tap', function(){
   
  });
  
- 
- }
 
 function otrosElementos()
  {
@@ -120,6 +120,10 @@ function otrosElementos()
   });
 
  });
+
+ 
+ }
+
 
 
 
