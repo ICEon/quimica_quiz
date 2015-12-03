@@ -19,7 +19,7 @@ $(document).ready(function(e) {
 //	alert (alto + "footer " + alto_footer);
 		
  $('.boton').on('tap', function(){
-	alert (velocidad); 
+//	alert (velocidad); 
 	 
 	 $('#uno').css('top', $('#uno').position().top -100);
 	 	 $('#tres').css('top', $('#tres').position().top -50);
