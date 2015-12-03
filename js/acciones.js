@@ -51,15 +51,16 @@ $('#btnacierto').on('tap', function(){
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
  
    db.transaction(function(tx) {
-        tx.executeSql("select numeroAtomico, nombreElemento from Elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
+        tx.executeSql("select numeroAtomico, nombreElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
+			
         });
       });
 	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
             transition: 'pop'
 			}); 
 	
-  $("#quien").popup("open",{transition: "flip"});
+//  $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 3) + 1);
   
   do 
@@ -70,6 +71,29 @@ $('#btnacierto').on('tap', function(){
    while (!((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)))
    
    alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
+
+   db.transaction(function(tx) {
+        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
+			$("#uno").html(res.rows.item(0).simboloElemento);
+			
+        });
+      });
+
+   db.transaction(function(tx) {
+        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento1 + ";", [], function(tx, res) {
+			$("#dos").html(res.rows.item(0).simboloElemento);
+			
+        });
+      });
+
+
+   db.transaction(function(tx) {
+        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento2 + ";", [], function(tx, res) {
+			$("#tres").html(res.rows.item(0).simboloElemento);
+			
+        });
+      });
+
    
 
   
