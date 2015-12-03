@@ -30,7 +30,7 @@ var azar = JSON.parse(opcionesJSON);
 
 function conectar_base()
  {
-  db = window.sqlitePlugin.openDatabase({name: "quimica_b.db", createFromLocation: 1});					
+  db = window.sqlitePlugin.openDatabase({name: "quimica_b.db", createFromLocation: 1});
  }
  
  
@@ -55,10 +55,10 @@ $('#btnacierto').on('tap', function(){
  $('#btnjugar').on('tap', function(){
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
-
+			alert (elementoEncontrar); 
    db.transaction(function(tx) {
         tx.executeSql("select numeroAtomico, nombreElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
-			alert (elementoEncontrar); 
+
 			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
 			
         });
