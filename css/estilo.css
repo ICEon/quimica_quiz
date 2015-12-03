@@ -1,125 +1,73 @@
 @charset "utf-8";
 /* CSS Document */
-.icono-grande
+.adivinar
+ {
+	 width: 100%;
+	 top: 0;
+     left: 0;
+	 border-bottom-left-radius: 15px;
+	 border-bottom-right-radius: 15px;
+
+ }
+.boton
 {
     display: inline-block;
-	font-size: 350%;
-	margin: 10px 15px 10px;
-	color: #999;	
-	border: 2px solid #999;
-	border-radius: 50%;
-	height: 70px;
-	width: 70px;
+	font-size: 4rem;
+	margin: 0.1rem;
+	color: #FFF;	
+	border: 0.7rem solid #FFF;
 	text-align: center;
-	padding: 5px;
+	width: 22%;
 }
 
-.icono-mediano
+#comandos
  {
-    display: inline-block;
-	font-size: 175%;
-	margin: 5px 5px 5px;
-	color: #2C2CFE;	
-    height: 35px;
-	width: 35px;
-	text-align: center;
-	padding: 5px;
+		  width: 100%;
+		  background-color: #30F;
  }
 
-
-.icono-azul
+#comandos div:first-child
  {
-	color: #00F;	
-	border-color: #00F;
- }
-
-.icono-rosa
- {
-	color: #F737ED;	
-	border-color: #F737ED;
- }
-#titulo,
-#titulo2
- {
-	font-size: 130%;
-	font-weight:bold; 
-	text-align: center;
-	padding: 10px; 
- }
-#guardar
- {
-	font-size: 200%;
-	font-weight:bold;
-	margin: 40px 20px 40px;
-	color: #600;	
-	border: 2px solid #600;	
-	text-align: center;
-	padding: 5px; 
- }
-.edad
-{
-    display: inline-block;
-	font-size: 200%;
-	margin: 10px 10px 10px;
-	color: #999;	
-	border: 2px solid #999;
-	border-radius: 25%;
-	height: 40px;
-	width: 50px;
-	text-align: center;
-	padding: 5px;
-}
-
-.edad-seleccionada
- {
- 	color: #e67e22;	
-	border-color: #e67e22;
- }
-
-.pregunta
-{
- font-size: 170%;
-}
-
-.respuesta1,
-.respuesta2,
-.respuesta3,
-.respuesta4
-{
-    display: inline-block;
-    font-size: 150%;
-	margin: 5px 20px 5px;
-	color: #999;	
-	border: 2px solid #999;
-	border-radius: 25%;
-	height: 50px;
-	width: 55px;
-	text-align: center;
-	padding: 5px;
-}
-
-
-.verde
- {
-	color: #0F0;	
-	border-color: #0F0;	 
+	 background-color:#D92440;
  }
  
-.rojo
-  {
-	  color: #F00;	
-	border-color: #F00;
-  }
-  
-
-.oculta
-{
-	display:none;	
-}
-
-
-@-webkit-animation bajar
+#comandos div:nth-child(2)
  {
-	 
-	 
+	  background-color:#6DD921;
+ }
+ 
+#comandos div:nth-child(3)
+ {
+	  background-color: #F87E26;
+ }
+
+.carril
+ {	 
+
+    display: inline-block;
+	overflow: hidden;	
+	margin: 0.1rem;
+	color: #FFF;	
+    border-right: 0.7rem solid #FFF; 
+	border-left: 0.7rem solid #FFF;
+	text-align: center;
+	width: 22%;
+ }
+ 
+$('#tablero')
+ {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+ }
+
+ #tablero span {
+	position:relative;
+	font-size:3em;
+	color:#900;
+	border:1px #0F0 solid;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+
  }
