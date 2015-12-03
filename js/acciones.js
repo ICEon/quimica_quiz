@@ -20,9 +20,9 @@ var db;
 var otroElemento1 = 0;
 var otroElemento2 = 0;
 
-var opcionesJSON = '{"opcion": [ {"uno":"uno", "dos":"dos","tres":"tres"},{"uno":"uno", "dos":"tres","tres":"dos"},{"uno":"dos", "dos":"tres","tres":"uno"},{"uno":"dos", "dos":"uno","tres":"tres"},{"uno":"tres", "dos":"uno","tres":"dos"},{"uno":"tres", "dos":"dos","tres":"uno"}]]';
+//var opcionesJSON = '{"opcion": [ {"uno":"uno", "dos":"dos","tres":"tres"},{"uno":"uno", "dos":"tres","tres":"dos"},{"uno":"dos", "dos":"tres","tres":"uno"},{"uno":"dos", "dos":"uno","tres":"tres"},{"uno":"tres", "dos":"uno","tres":"dos"},{"uno":"tres", "dos":"dos","tres":"uno"}]]';
 
-var azar = JSON.parse(opcionesJSON);
+//var azar = JSON.parse(opcionesJSON);
 
 
 //*************************
