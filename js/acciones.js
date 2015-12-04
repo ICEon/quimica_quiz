@@ -1,10 +1,10 @@
 // JavaScript Document
  
 $(document).ready(function(e) {
-
+var pulsado =0;
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
-var    velocidad = 2400 -(alto*.4);
+var    velocidad = 2800 -(alto*.4);
     $('.boton').css('width', ancho*.20);
 	$('.boton').css('height', ancho*.20);
     $('.boton').css('font-size', ancho*.15);
@@ -133,16 +133,24 @@ function otrosElementos()
 
  function animarCaida(){
   //	alert (velocidad); 	 
+  pulsado=0;
   $('#uno').css('top', inicial -100);
   $('#tres').css('top', inicial -50);
   $('#dos').css('top', inicial -10);
   $("#tablero span")
   //.css({top:0,position:'relative'})
   .animate({top: alto*.80}, velocidad, function() {
+	  
   });
-
- }
-
+   if (pulsado==1)
+    {
+	 alert ("pulsado");	
+	}
+ }//animar caida
+ 
+ $('.boton').on('tap', function(){
+    pulsado = 1;	 
+ });
  
  }
 
