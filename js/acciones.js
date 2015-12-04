@@ -88,12 +88,13 @@ $('#btnacierto').on('tap', function(){
    	 otrosElementos();  
 
     
-
+  
 
    db.transaction(function(tx) {
         tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 			
 			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
+			$("#b" + azar.opcion[donde].uno).addClass('elementoCorrecto');
 			
         });
       });
@@ -127,14 +128,16 @@ function otrosElementos()
  $('#btncontinuar').on('tap', function (){
   pulsado="";
   bandera=0;
+  $('.boton').removeClass('elementoCorrecto');
   $("#quien").popup("close",{transition: "flip"});
  animarCaida();
  });
 
 $('.boton').on('tap', function(){
-	
+   if ($(this).hasClass('elementoCorrecto'))
+    {
     pulsado = $(this).attr('id');
-	
+	}
 	//alert ("pulsado " + pulsado); 
  });
  
@@ -144,9 +147,14 @@ $('.boton').on('tap', function(){
     {	  
 	if (pulsado!="")
 	 {
-		alert (pulsado); 
-		bandera=1;
+		alert ("correcto");
+	
 	 }
+	 else
+	  {
+		  alert ("error");
+	  }
+	 	bandera=1; 
 	}
   }
  
