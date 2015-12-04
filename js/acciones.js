@@ -88,7 +88,20 @@ $('#btnacierto').on('tap', function(){
 */
    	 otrosElementos();  
 
-    
+      if (azar.opcion[donde].uno == "uno")
+	 {
+	   botonCorrecto = buno;
+	 }
+	 else if (azar.opcion[donde].uno == "dos")
+	  {
+	   botonCorrecto = bdos;
+	  }
+	  
+	  	 else if (azar.opcion[donde].uno == "tres")
+	  {
+	   botonCorrecto = tres;
+	  }
+  
   
 
    db.transaction(function(tx) {
@@ -115,19 +128,6 @@ $('#btnacierto').on('tap', function(){
         });
        });
 
-    if (azar.opcion[donde].uno == "uno")
-	 {
-	   botonCorrecto = buno;
-	 }
-	 else if (azar.opcion[donde].uno == "dos")
-	  {
-	   botonCorrecto = bdos;
-	  }
-	  
-	  	 else if (azar.opcion[donde].uno == "tres")
-	  {
-	   botonCorrecto = tres;
-	  }
   
   
  });
