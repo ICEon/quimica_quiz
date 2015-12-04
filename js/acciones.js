@@ -5,6 +5,7 @@ var pulsado ="";
 var bandera=0;
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
+var botonCorrecto = "";
 var    velocidad = 2800 -(alto*.4);
     $('.boton').css('width', ancho*.20);
 	$('.boton').css('height', ancho*.20);
@@ -116,19 +117,16 @@ $('#btnacierto').on('tap', function(){
 
     if (azar.opcion[donde].uno == "uno")
 	 {
-		 alert ('1');
-		 $('#buno').addClass('elementoCorrecto');
+	   botonCorrecto = buno;
 	 }
 	 else if (azar.opcion[donde].uno == "dos")
 	  {
-		  		 alert ('2');
-		  		 $('#bdos').addClass('elementoCorrecto');
+	   botonCorrecto = bdos;
 	  }
 	  
 	  	 else if (azar.opcion[donde].uno == "tres")
 	  {
-		  		 alert ('3');
-		 $('#btres').addClass('elementoCorrecto');
+	   botonCorrecto = tres;
 	  }
   
   
@@ -142,7 +140,7 @@ function otrosElementos()
  }
 
  $('#btncontinuar').on('tap', function (){
-	  
+  botonCorrecto="";
   pulsado="";
   bandera=0;
   $('.boton').removeClass('elementoCorrecto');
@@ -152,51 +150,17 @@ function otrosElementos()
 // animarCaida();
  });
  
- $('#buno').on('tap', function(){
-	 if ($(this).hasClass('elementoCorrecto'))
-	  {
-		alert ("uno");  
-	  }
- });
- 
-  $('#bdos').on('tap', function(){
-	 if ($(this).hasClass('elementoCorrecto'))
-	  {
-		alert ("dos");  
-	  }
- });
- 
-  $('#btres').on('tap', function(){
-	 if ($(this).hasClass('elementoCorrecto'))
-	  {
-		alert ("tres");  
-	  }
- });
 
 $('.boton').on('tap', function(){
    
-   if($('#buno').hasClass('elementoCorrecto'))
-    {
-		alert ('uno');
-	}
-	
-	   if($('#bdos').hasClass('elementoCorrecto'))
-    {
-		alert ('bdos');
-	}
-	
-	   if($('#btres').hasClass('elementoCorrecto'))
-    {
-		alert ('tres');
-	}
-   
-   if ($(this).hasClass('elementoCorrecto'))
+   if (botonCorrecto == $(this).attr('id'))
     {
     pulsado = $(this).attr('id');
+	
 	}
-	//alert ("pulsado " + pulsado); 
+
  });
- 
+
  function revisar()
   {
    if (bandera==0)
