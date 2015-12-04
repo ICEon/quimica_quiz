@@ -71,3 +71,8 @@ $('#tablero')
     height: 80px;
 
  }
+ 
+  .grande
+ {display:block;
+  color:#E67E22;
+ }

@@ -2,6 +2,7 @@
  
 $(document).ready(function(e) {
 var pulsado ="";
+var simboloCorrecto="";
 var bandera=0;
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
@@ -43,22 +44,19 @@ $(document).ready(function(e) {
 	
 document.addEventListener("deviceready", onDeviceReady, false);
 
-$('#bnterror').on('tap', function(){
-  $("#quien").popup("close");
-  $('#error').popup('open');   		
-});
-
-$('#btnacierto').on('tap', function(){
-	  $("#quien").popup("close");
-  $('#acierto').popup('open');   		
-});
 
  function onDeviceReady() {
 	 
  conectar_base();
 
  $('#btnjugar').on('tap', function(){
-	   botonCorrecto="";
+	 nuevoElemento();
+ });// tap btnjugar
+ 
+ 
+ function nuevoElemento()
+  {
+		   botonCorrecto="";
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
 			//alert (elementoEncontrar); 
@@ -113,7 +111,7 @@ $('#btnacierto').on('tap', function(){
         tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 			
 			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
-			 
+			simboloCorrecto = res.rows.item(0).simboloElemento;
 
 			
         });
@@ -135,8 +133,8 @@ $('#btnacierto').on('tap', function(){
 
   
   
- });
- 
+  
+  }
 
 function otrosElementos()
  {
@@ -167,14 +165,22 @@ $('.boton').on('tap', function(){
 
  });
 
+$('#btn_otro_elemento').on('tap', function(){
+   $("#acierto").popup('open', {transition: "flip"});	
+	nuevoElemento();
+});
+
+
  function revisar()
   {
    if (bandera==0)
     {	  
 	if (pulsado!="")
 	 {
-		alert ("correcto");
-	
+      $("#acierto").popup();
+	  $('#simbolo_elemento').html(simboloCorrecto);
+	  $('#nombre_elemento').html($("#elementoActual").html());
+	  $("#acierto").popup('open', {transition: "slide"});	
 	 }
 	 else
 	  {
