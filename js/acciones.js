@@ -79,7 +79,8 @@ $('#btnacierto').on('tap', function(){
 	 alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
 	 alert ("dentro");
    }
-   while (((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)));
+     while ((elementoEcontrar != otroElemento1));
+//   while (((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)));
 
    
 
