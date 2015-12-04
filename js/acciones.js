@@ -3,6 +3,7 @@
 $(document).ready(function(e) {
 var pulsado ="";
 var primera = 0;
+
 var simboloCorrecto="";
 var bandera=0;
 var	ancho = $('#principal').width();	 
@@ -58,6 +59,10 @@ document.addEventListener("deviceready", onDeviceReady, false);
  
  function nuevoElemento()
   {
+	  
+	  $('.carril span').each(function() {
+		   $(this).html("");
+	 });
 		   botonCorrecto="";
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
@@ -78,7 +83,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 			}); 
 		primera=1;	
 	   }
-
+  $('#encontrados').html(aciertos);
   $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
    // alert (donde + "," + azar.opcion[donde].uno);
@@ -203,7 +208,10 @@ $(document).on("popupafterclose", "#error", function () {
 	  $('.nombre_elemento').html($("#elementoActual").html());
 	if (pulsado!="")
 	 {
+	  aciertos = aciertos + 1;
+	  
       $("#acierto").popup();
+	  
 	  $("#acierto").popup('open', {transition: "slide"});	
 	 }
 	 else
