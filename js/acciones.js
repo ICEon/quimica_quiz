@@ -66,10 +66,10 @@ $('#btnacierto').on('tap', function(){
 			
         });
       });
-/*	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
+	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
             transition: 'pop'
 			}); 
-	*/
+
   $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
 //  alert (donde + "," + azar.opcion[donde].uno);
@@ -132,7 +132,7 @@ function otrosElementos()
   $('#dos').css('top', $('#dos').position().top -10);
   $("#tablero span")
   //.css({top:0,position:'relative'})
-  .animate({top: alto*.50}, velocidad, function() {
+  .animate({top: alto*.80}, velocidad, function() {
   });
 
  });
