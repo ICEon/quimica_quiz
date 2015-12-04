@@ -116,15 +116,18 @@ $('#btnacierto').on('tap', function(){
 
     if (azar.opcion[donde].uno == "uno")
 	 {
+		 alert ('1');
 		 $('#buno').addClass('elementoCorrecto');
 	 }
 	 else if (azar.opcion[donde].uno == "dos")
 	  {
+		  		 alert ('2');
 		  		 $('#bdos').addClass('elementoCorrecto');
 	  }
 	  
 	  	 else if (azar.opcion[donde].uno == "tres")
 	  {
+		  		 alert ('3');
 		 $('#btres').addClass('elementoCorrecto');
 	  }
   
