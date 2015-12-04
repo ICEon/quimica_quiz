@@ -48,7 +48,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 
  function onDeviceReady() {
-	 
+	 audio = window.plugins.LowLatencyAudio;	
+audio.preloadFX('error', 'recursos/sonidos/error.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });	
+audio.preloadFX('acierto', 'recursos/sonidos/acierto.mp3', function(msg){}, function(msg){ alert( 'Error: ' + msg ); });	
  conectar_base();
 
  $('#btnjugar').on('tap', function(){
@@ -60,9 +62,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
  function nuevoElemento()
   {
 	  
-	  $('.carril span').each(function() {
+	 /* $('.carril span').each(function() {
 		   $(this).html("");
-	 });
+	 });*/
 		   botonCorrecto="";
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
@@ -211,12 +213,13 @@ $(document).on("popupafterclose", "#error", function () {
 	  aciertos = aciertos + 1;
 	  
       $("#acierto").popup();
-	  
+  	  audio.play('acierto');
 	  $("#acierto").popup('open', {transition: "slide"});	
 	 }
 	 else
 	  {
       $("#error").popup();
+      navigator.notification.vibrate(300);
 	  $("#error").popup('open', {transition: "slide"});	
 	  }
 	 	bandera=1; 
