@@ -95,7 +95,7 @@ $('#btnacierto').on('tap', function(){
 			
 			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
 			$("#b" + azar.opcion[donde].uno).addClass('elementoCorrecto');
-			alert ($("#b" + azar.opcion[donde].uno).attr('id'));
+//			alert ($("#b" + azar.opcion[donde].uno).attr('id'));
 			
         });
       });
