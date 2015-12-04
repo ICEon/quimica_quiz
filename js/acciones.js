@@ -70,7 +70,7 @@ $('#btnacierto').on('tap', function(){
             transition: 'pop'
 			}); 
 	*/
-  //$("#quien").popup("open",{transition: "flip"});
+  $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
 //  alert (donde + "," + azar.opcion[donde].uno);
 /*  do 
@@ -120,6 +120,10 @@ function otrosElementos()
 	otroElemento1 = Math.floor((Math.random() * 118) + 1);
 	otroElemento2 = Math.floor((Math.random() * 118) + 1);
  }
+
+ $('#continuar').on('tap', function (){
+  $("#quien").popup("close",{transition: "flip"});
+ });
 
  $('.boton').on('tap', function(){
   //	alert (velocidad); 	 
