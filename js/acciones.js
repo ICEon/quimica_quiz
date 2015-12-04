@@ -152,7 +152,8 @@ animarCaida();
  
 
 $('.boton').on('tap', function(){
-	alert ("tap");
+	alert (botonCorrecto+"--"+$(this).attr('id'));
+	
    
    if (botonCorrecto == $(this).attr('id'))
     {
