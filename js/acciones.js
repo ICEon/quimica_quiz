@@ -2,6 +2,7 @@
  
 $(document).ready(function(e) {
 var pulsado ="";
+var cual = "";
 var bandera=0;
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
@@ -89,16 +90,17 @@ $('#btnacierto').on('tap', function(){
    	 otrosElementos();  
 
 
-      if (azar.opcion[donde].uno == "uno")
+cual = ""+azar.opcion[donde].uno;
+      if (cual == "uno")
 	 {
 	   botonCorrecto = buno;
 	 }
-	 else if (azar.opcion[donde].uno == "dos")
+	 else if (cual == "dos")
 	  {
 	   botonCorrecto = bdos;
 	  }
 	  
-	  	 else if (azar.opcion[donde].uno == "tres")
+	  	 else if (cual == "tres")
 	  {
 	   botonCorrecto = tres;
 	  }
