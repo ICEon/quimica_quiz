@@ -124,7 +124,7 @@ function otrosElementos()
  }
 
  $('#btncontinuar').on('tap', function (){
-
+  pulsado=0;
   $("#quien").popup("close",{transition: "flip"});
  animarCaida();
  });
@@ -133,7 +133,7 @@ function otrosElementos()
 
  function animarCaida(){
   //	alert (velocidad); 	 
-  pulsado=0;
+
   $('#uno').css('top', inicial -100);
   $('#tres').css('top', inicial -50);
   $('#dos').css('top', inicial -10);
