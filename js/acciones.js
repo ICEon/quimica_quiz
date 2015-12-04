@@ -53,6 +53,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
  $('#btnjugar').on('tap', function(){
 	 nuevoElemento();
+	 	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
+            transition: 'pop'
+			}); 
  });// tap btnjugar
  
  
@@ -71,9 +74,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 			
         });
       });
-	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
-            transition: 'pop'
-			}); 
+
 
   $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
