@@ -134,7 +134,8 @@ function otrosElementos()
  });
 
 $('.boton').on('tap', function(){
-   if ($(this).hasClass('elementoCorrecto'))
+	alert ($(this).attr('class'));
+   if ($(this).hasClass('boton'))
     {
     pulsado = $(this).attr('id');
 	}
