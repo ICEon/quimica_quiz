@@ -77,7 +77,7 @@ $('#btnacierto').on('tap', function(){
 
   $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
-    alert (donde + "," + azar.opcion[donde].uno);
+   // alert (donde + "," + azar.opcion[donde].uno);
 /*  do 
    {
 	 otrosElementos();  
@@ -104,7 +104,7 @@ $('#btnacierto').on('tap', function(){
 	  	 else if (azar.opcion[donde].uno == "tres")
 	  {
 
-	   botonCorrecto = "tres";
+	   botonCorrecto = "btres";
 	  }
   
   
@@ -156,7 +156,7 @@ animarCaida();
  
 
 $('.boton').on('tap', function(){
-	alert (botonCorrecto+"--"+$(this).attr('id'));
+	//alert (botonCorrecto+"--"+$(this).attr('id'));
 	
    
    if (botonCorrecto == $(this).attr('id'))
