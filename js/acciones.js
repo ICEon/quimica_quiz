@@ -1,6 +1,7 @@
 // JavaScript Document
  
 $(document).ready(function(e) {
+
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
 var    velocidad = 2400 -(alto*.4);
@@ -20,7 +21,8 @@ var db;
 var otroElemento1 = 0;
 var otroElemento2 = 0;
 
-//var opcionesJSON = '{"opcion": [ {"uno":"uno", "dos":"dos","tres":"tres"},{"uno":"uno", "dos":"tres","tres":"dos"},{"uno":"dos", "dos":"tres","tres":"uno"},{"uno":"dos", "dos":"uno","tres":"tres"},{"uno":"tres", "dos":"uno","tres":"dos"},{"uno":"tres", "dos":"dos","tres":"uno"}]]';
+var opcionesJSON = '{"opcion": [ {"uno":"uno", "dos":"dos","tres":"tres"},{"uno":"uno", "dos":"tres","tres":"dos"},{"uno":"dos", "dos":"tres","tres":"uno"},{"uno":"dos", "dos":"uno","tres":"tres"},{"uno":"tres", "dos":"uno","tres":"dos"},{"uno":"tres", "dos":"dos","tres":"uno"}]]';
+
 
 //var azar = JSON.parse(opcionesJSON);
 
@@ -56,6 +58,7 @@ $('#btnacierto').on('tap', function(){
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
 			alert (elementoEncontrar); 
+			
    db.transaction(function(tx) {
         tx.executeSql("select numeroAtomico, nombreElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 
@@ -67,7 +70,7 @@ $('#btnacierto').on('tap', function(){
             transition: 'pop'
 			}); 
 	
-//  $("#quien").popup("open",{transition: "flip"});
+  $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
   alert (donde + "," + azar.opcion[donde].uno);
 /*  do 
@@ -82,28 +85,6 @@ $('#btnacierto').on('tap', function(){
     
    alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
 
-   db.transaction(function(tx) {
-        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
-			
-			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
-			
-        });
-      });
-
-   db.transaction(function(tx) {
-        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento1 + ";", [], function(tx, res) {
-			$("#" + azar.opcion[donde].dos).html(res.rows.item(0).simboloElemento);
-			
-        });
-      });
-
-
-   db.transaction(function(tx) {
-        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento2 + ";", [], function(tx, res) {
-			$("#" + azar.opcion[donde].tres).html(res.rows.item(0).simboloElemento);
-			
-        });
-      });
 
    
 
