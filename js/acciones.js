@@ -2,6 +2,7 @@
  
 $(document).ready(function(e) {
 var pulsado ="";
+var primera = 0;
 var simboloCorrecto="";
 var bandera=0;
 var	ancho = $('#principal').width();	 
@@ -48,21 +49,17 @@ document.addEventListener("deviceready", onDeviceReady, false);
  function onDeviceReady() {
 	 
  conectar_base();
- $("#acierto").popup();
- $("#quien").popup();
 
  $('#btnjugar').on('tap', function(){
+	 primera = 0;
 	 nuevoElemento();
-	 	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
-            transition: 'pop'
-			}); 
  });// tap btnjugar
  
  
  function nuevoElemento()
   {
 		   botonCorrecto="";
-
+					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
 			//alert (elementoEncontrar); 
 			
@@ -74,7 +71,13 @@ document.addEventListener("deviceready", onDeviceReady, false);
 			
         });
       });
-
+	  if (primera == 0)
+	   {
+	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
+            transition: 'pop'
+			}); 
+		primera=1;	
+	   }
 
   $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
@@ -180,7 +183,7 @@ $('#btn_otro_elemento').on('tap', function(){
     {	  
 	if (pulsado!="")
 	 {
-
+      $("#acierto").popup();
 	  $('#simbolo_elemento').html(simboloCorrecto);
 	  $('#nombre_elemento').html($("#elementoActual").html());
 	  $("#acierto").popup('open', {transition: "slide"});	
