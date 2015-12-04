@@ -91,15 +91,18 @@ $('#btnacierto').on('tap', function(){
 
       if (azar.opcion[donde].uno == "uno")
 	 {
+		 alert ("1");
 	   botonCorrecto = "buno";
 	 }
 	 else if (azar.opcion[donde].uno == "dos")
 	  {
+		  		 alert ("2");
 	   botonCorrecto = "bdos";
 	  }
 	  
 	  	 else if (azar.opcion[donde].uno == "tres")
 	  {
+		  		 alert ("3");
 	   botonCorrecto = "tres";
 	  }
   
