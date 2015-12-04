@@ -177,9 +177,21 @@ $('#btn_otro_elemento').on('tap', function(){
 	
 });
 
+$('#btn_error_elemento').on('tap', function(){
+   $("#error").popup('close', {transition: "flip"});	
+   
+	
+});
+
+
 $(document).on("popupafterclose", "#acierto", function () {
 	nuevoElemento();
-  // Add your code here
+
+});
+
+$(document).on("popupafterclose", "#error", function () {
+	nuevoElemento();
+
 });
 
 
@@ -187,16 +199,17 @@ $(document).on("popupafterclose", "#acierto", function () {
   {
    if (bandera==0)
     {	  
+	  $('.simbolo_elemento').html(simboloCorrecto);
+	  $('.nombre_elemento').html($("#elementoActual").html());
 	if (pulsado!="")
 	 {
       $("#acierto").popup();
-	  $('#simbolo_elemento').html(simboloCorrecto);
-	  $('#nombre_elemento').html($("#elementoActual").html());
 	  $("#acierto").popup('open', {transition: "slide"});	
 	 }
 	 else
 	  {
-		  alert ("error");
+      $("#error").popup();
+	  $("#error").popup('open', {transition: "slide"});	
 	  }
 	 	bandera=1; 
 	}
