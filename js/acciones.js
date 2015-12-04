@@ -13,6 +13,7 @@ var    velocidad = 2800 -(alto*.4);
     $('.boton').css('width', ancho*.20);
 	$('.boton').css('height', ancho*.20);
     $('.boton').css('font-size', ancho*.15);
+	$('#elementoEncontrar').css('font-size', ancho*.15);
 	$('.carril').css('width', ancho*.20);
     $('.carril').css('height', alto*.80);
 	$('.adivinar').css('height', ancho*.20);    	
@@ -219,7 +220,7 @@ $(document).on("popupafterclose", "#error", function () {
 	 else
 	  {
       $("#error").popup();
-      navigator.notification.vibrate(300);
+      navigator.notification.vibrate(500);
 	  $("#error").popup('open', {transition: "slide"});	
 	  }
 	 	bandera=1; 

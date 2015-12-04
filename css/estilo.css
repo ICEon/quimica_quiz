@@ -64,7 +64,7 @@ $('#tablero')
  #tablero span {
 	position:relative;
 	font-size:3em;
-	color:#900;
+	color:#6DD921;
 	/*border:1px #0F0 solid;*/
     display: inline-block;
     width: 80px;
