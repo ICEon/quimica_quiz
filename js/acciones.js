@@ -94,9 +94,8 @@ $('#btnacierto').on('tap', function(){
         tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 			
 			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
-			$("#b" + azar.opcion[donde].uno).addClass('elementoCorrecto');
 			 
-//			alert ($("#b" + azar.opcion[donde].uno).attr('id'));
+
 			
         });
       });
@@ -113,9 +112,21 @@ $('#btnacierto').on('tap', function(){
 			$("#" + azar.opcion[donde].tres).html(res.rows.item(0).simboloElemento);
 			
         });
-      });
+       });
 
-
+    if (azar.opcion[donde].uno = "uno")
+	 {
+		 $('#buno').addClass('elementoCorrecto');
+	 }
+	 else if (azar.opcion[donde].uno = "dos")
+	  {
+		  		 $('#bdos').addClass('elementoCorrecto');
+	  }
+	  
+	  	 else if (azar.opcion[donde].uno = "tres")
+	  {
+		 $('#btres').addClass('elementoCorrecto');
+	  }
   
   
  });
