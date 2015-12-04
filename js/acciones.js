@@ -48,6 +48,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
  function onDeviceReady() {
 	 
  conectar_base();
+ $("#acierto").popup();
+ $("#quien").popup();
 
  $('#btnjugar').on('tap', function(){
 	 nuevoElemento();
@@ -57,7 +59,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
  function nuevoElemento()
   {
 		   botonCorrecto="";
-					  $("#quien").popup();
+
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
 			//alert (elementoEncontrar); 
 			
@@ -177,7 +179,7 @@ $('#btn_otro_elemento').on('tap', function(){
     {	  
 	if (pulsado!="")
 	 {
-      $("#acierto").popup();
+
 	  $('#simbolo_elemento').html(simboloCorrecto);
 	  $('#nombre_elemento').html($("#elementoActual").html());
 	  $("#acierto").popup('open', {transition: "slide"});	
