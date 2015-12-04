@@ -70,13 +70,13 @@ $('#btnacierto').on('tap', function(){
             transition: 'pop'
 			}); 
 	*/
-  $("#quien").popup("open",{transition: "flip"});
+  //$("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
 //  alert (donde + "," + azar.opcion[donde].uno);
   do 
    {
 	 otrosElementos();  
-	    alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
+	 alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
 	 alert ("dentro");
    }
    while (((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)));
