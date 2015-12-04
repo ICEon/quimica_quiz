@@ -73,16 +73,16 @@ $('#btnacierto').on('tap', function(){
   //$("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
 //  alert (donde + "," + azar.opcion[donde].uno);
-  do 
+/*  do 
    {
 	 otrosElementos();  
 	 alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
 	 alert ("dentro");
    }
-     while ((elementoEcontrar != otroElemento1));
-//   while (((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)));
 
-   
+   while (((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)));
+*/
+   	 otrosElementos();  
 
     
 
