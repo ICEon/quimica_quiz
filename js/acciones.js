@@ -24,7 +24,7 @@ var otroElemento2 = 0;
 var opcionesJSON = '{"opcion": [ {"uno":"uno", "dos":"dos","tres":"tres"},{"uno":"uno", "dos":"tres","tres":"dos"},{"uno":"dos", "dos":"tres","tres":"uno"},{"uno":"dos", "dos":"uno","tres":"tres"},{"uno":"tres", "dos":"uno","tres":"dos"},{"uno":"tres", "dos":"dos","tres":"uno"}]]';
 
 
-//var azar = JSON.parse(opcionesJSON);
+var azar = JSON.parse(opcionesJSON);
 
 
 //*************************
@@ -57,7 +57,7 @@ $('#btnacierto').on('tap', function(){
  $('#btnjugar').on('tap', function(){
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
-			alert (elementoEncontrar); 
+			//alert (elementoEncontrar); 
 			
    db.transaction(function(tx) {
         tx.executeSql("select numeroAtomico, nombreElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
