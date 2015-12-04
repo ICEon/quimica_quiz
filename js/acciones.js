@@ -129,7 +129,10 @@ function otrosElementos()
  animarCaida();
  });
 
-
+$('.boton').on('tap', function(){
+	
+    pulsado = 1;	alert ("pulsado " + pulsado); 
+ });
 
  function animarCaida(){
   //	alert (velocidad); 	 
@@ -148,9 +151,8 @@ function otrosElementos()
 	}
  }//animar caida
  
- $('.boton').on('tap', function(){
-    pulsado = 1;	 
- });
+ 
+ 
  
  }
 
