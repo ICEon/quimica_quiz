@@ -152,7 +152,7 @@ function otrosElementos()
 // animarCaida();
  });
  
-/* $('#buno').on('tap', function(){
+ $('#buno').on('tap', function(){
 	 if ($(this).hasClass('elementoCorrecto'))
 	  {
 		alert ("uno");  
@@ -171,7 +171,7 @@ function otrosElementos()
 	  {
 		alert ("tres");  
 	  }
- });*/
+ });
 
 $('.boton').on('tap', function(){
    
