@@ -147,11 +147,12 @@ function otrosElementos()
   $("#quien").popup("close",{transition: "flip"});
   
 
-// animarCaida();
+animarCaida();
  });
  
 
 $('.boton').on('tap', function(){
+	alert ("tap");
    
    if (botonCorrecto == $(this).attr('id'))
     {
