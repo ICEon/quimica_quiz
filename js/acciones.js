@@ -2,7 +2,6 @@
  
 $(document).ready(function(e) {
 var pulsado ="";
-var cual = "";
 var bandera=0;
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
@@ -90,19 +89,18 @@ $('#btnacierto').on('tap', function(){
    	 otrosElementos();  
 
 
-cual = ""+azar.opcion[donde].uno;
-      if (cual == "uno")
+      if (azar.opcion[donde].uno == "uno")
 	 {
-	   botonCorrecto = buno;
+	   botonCorrecto = "buno";
 	 }
-	 else if (cual == "dos")
+	 else if (azar.opcion[donde].uno == "dos")
 	  {
-	   botonCorrecto = bdos;
+	   botonCorrecto = "bdos";
 	  }
 	  
-	  	 else if (cual == "tres")
+	  	 else if (azar.opcion[donde].uno == "tres")
 	  {
-	   botonCorrecto = tres;
+	   botonCorrecto = "tres";
 	  }
   
   
