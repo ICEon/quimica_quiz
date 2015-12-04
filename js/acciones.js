@@ -2,6 +2,7 @@
  
 $(document).ready(function(e) {
 var pulsado ="";
+var bandera=0;
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
 var    velocidad = 2800 -(alto*.4);
@@ -125,6 +126,7 @@ function otrosElementos()
 
  $('#btncontinuar').on('tap', function (){
   pulsado="";
+  bandera=0;
   $("#quien").popup("close",{transition: "flip"});
  animarCaida();
  });
@@ -138,10 +140,14 @@ $('.boton').on('tap', function(){
  
  function revisar()
   {
+   if (bandera==0)
+    {	  
 	if (pulsado!="")
 	 {
 		alert (pulsado); 
+		bandera=1;
 	 }
+	}
   }
  
 
