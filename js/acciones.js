@@ -63,8 +63,8 @@ $('#btnacierto').on('tap', function(){
    db.transaction(function(tx) {
         tx.executeSql("select numeroAtomico, nombreElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 
-			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
-			$('#elementoActual')..html(res.rows.item(0).nombreElemento);
+			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);			
+			$("#elementoActual").html(res.rows.item(0).nombreElemento);
 			
         });
       });
