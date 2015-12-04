@@ -20,6 +20,7 @@ var aciertos = 0;
 var db;
 var otroElemento1 = 0;
 var otroElemento2 = 0;
+var inicial = $('#uno').position().top;
 
 var opcionesJSON = '{"opcion": [ {"uno":"uno", "dos":"dos","tres":"tres"},{"uno":"uno", "dos":"tres","tres":"dos"},{"uno":"dos", "dos":"tres","tres":"uno"},{"uno":"dos", "dos":"uno","tres":"tres"},{"uno":"tres", "dos":"uno","tres":"dos"},{"uno":"tres", "dos":"dos","tres":"uno"}]}';
 
@@ -63,6 +64,7 @@ $('#btnacierto').on('tap', function(){
         tx.executeSql("select numeroAtomico, nombreElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
 
 			$("#elementoEncontrar").html(res.rows.item(0).nombreElemento);
+			$('#elementoActual')..html(res.rows.item(0).nombreElemento);
 			
         });
       });
@@ -124,21 +126,22 @@ function otrosElementos()
  $('#btncontinuar').on('tap', function (){
 
   $("#quien").popup("close",{transition: "flip"});
+ animarCaida();
  });
 
 
 
- $('.boton').on('tap', function(){
+ function animarCaida(){
   //	alert (velocidad); 	 
-  $('#uno').css('top', $('#uno').position().top -100);
-  $('#tres').css('top', $('#tres').position().top -50);
-  $('#dos').css('top', $('#dos').position().top -10);
+  $('#uno').css('top', inicial -100);
+  $('#tres').css('top', inicial -50);
+  $('#dos').css('top', inicial -10);
   $("#tablero span")
   //.css({top:0,position:'relative'})
   .animate({top: alto*.80}, velocidad, function() {
   });
 
- });
+ }
 
  
  }
