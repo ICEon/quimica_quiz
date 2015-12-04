@@ -173,7 +173,13 @@ $('.boton').on('tap', function(){
 
 $('#btn_otro_elemento').on('tap', function(){
    $("#acierto").popup('close', {transition: "flip"});	
+   
+	
+});
+
+$(document).on("popupafterclose", "#acierto", function () {
 	nuevoElemento();
+  // Add your code here
 });
 
 
