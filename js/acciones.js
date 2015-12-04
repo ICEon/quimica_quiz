@@ -58,6 +58,7 @@ $('#btnacierto').on('tap', function(){
  conectar_base();
 
  $('#btnjugar').on('tap', function(){
+	   botonCorrecto="";
 					  $("#quien").popup();
    elementoEncontrar = Math.floor((Math.random() * 118) + 1);
 			//alert (elementoEncontrar); 
@@ -91,18 +92,18 @@ $('#btnacierto').on('tap', function(){
 
       if (azar.opcion[donde].uno == "uno")
 	 {
-		 alert ("1");
+
 	   botonCorrecto = "buno";
 	 }
 	 else if (azar.opcion[donde].uno == "dos")
 	  {
-		  		 alert ("2");
+
 	   botonCorrecto = "bdos";
 	  }
 	  
 	  	 else if (azar.opcion[donde].uno == "tres")
 	  {
-		  		 alert ("3");
+
 	   botonCorrecto = "tres";
 	  }
   
@@ -144,7 +145,6 @@ function otrosElementos()
  }
 
  $('#btncontinuar').on('tap', function (){
-  botonCorrecto="";
   pulsado="";
   bandera=0;
   $('.boton').removeClass('elementoCorrecto');
