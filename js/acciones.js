@@ -66,24 +66,25 @@ $('#btnacierto').on('tap', function(){
 			
         });
       });
-	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
+/*	$(':mobile-pagecontainer').pagecontainer('change', '#juego',{
             transition: 'pop'
 			}); 
-	
+	*/
   $("#quien").popup("open",{transition: "flip"});
   donde = Math.floor((Math.random() * 6) + 1);
 //  alert (donde + "," + azar.opcion[donde].uno);
   do 
    {
 	 otrosElementos();  
+	    alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
+	 alert ("dentro");
    }
-   
-   while (!((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)))
+   while (((elementoEcontrar != otroElemento1) && (otroElemento1 != otroElemento2) && (otroElemento2 != elementoEncontrar)));
 
    
 
     
-   alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
+
 
    db.transaction(function(tx) {
         tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
