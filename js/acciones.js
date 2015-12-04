@@ -95,6 +95,7 @@ $('#btnacierto').on('tap', function(){
 			
 			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
 			$("#b" + azar.opcion[donde].uno).addClass('elementoCorrecto');
+			 
 //			alert ($("#b" + azar.opcion[donde].uno).attr('id'));
 			
         });
@@ -127,15 +128,33 @@ function otrosElementos()
  }
 
  $('#btncontinuar').on('tap', function (){
+	  
   pulsado="";
   bandera=0;
   $('.boton').removeClass('elementoCorrecto');
   $("#quien").popup("close",{transition: "flip"});
- animarCaida();
+  
+
+// animarCaida();
  });
 
 $('.boton').on('tap', function(){
-
+   
+   if($('#buno').hasClass('elementoCorrecto'))
+    {
+		alert ('uno');
+	}
+	
+	   if($('#bdos').hasClass('elementoCorrecto'))
+    {
+		alert ('bdos');
+	}
+	
+	   if($('#btres').hasClass('elementoCorrecto'))
+    {
+		alert ('tres');
+	}
+   
    if ($(this).hasClass('elementoCorrecto'))
     {
     pulsado = $(this).attr('id');
