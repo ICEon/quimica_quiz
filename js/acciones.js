@@ -121,8 +121,8 @@ function otrosElementos()
 	otroElemento2 = Math.floor((Math.random() * 118) + 1);
  }
 
- $('#continuar').on('tap', function (){
-	 alert ("close");
+ $('#btncontinuar').on('tap', function (){
+
   $("#quien").popup("close",{transition: "flip"});
  });
 
