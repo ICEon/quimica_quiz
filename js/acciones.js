@@ -114,16 +114,16 @@ $('#btnacierto').on('tap', function(){
         });
        });
 
-    if (azar.opcion[donde].uno = "uno")
+    if (azar.opcion[donde].uno == "uno")
 	 {
 		 $('#buno').addClass('elementoCorrecto');
 	 }
-	 else if (azar.opcion[donde].uno = "dos")
+	 else if (azar.opcion[donde].uno == "dos")
 	  {
 		  		 $('#bdos').addClass('elementoCorrecto');
 	  }
 	  
-	  	 else if (azar.opcion[donde].uno = "tres")
+	  	 else if (azar.opcion[donde].uno == "tres")
 	  {
 		 $('#btres').addClass('elementoCorrecto');
 	  }
@@ -148,6 +148,27 @@ function otrosElementos()
 
 // animarCaida();
  });
+ 
+/* $('#buno').on('tap', function(){
+	 if ($(this).hasClass('elementoCorrecto'))
+	  {
+		alert ("uno");  
+	  }
+ });
+ 
+  $('#bdos').on('tap', function(){
+	 if ($(this).hasClass('elementoCorrecto'))
+	  {
+		alert ("dos");  
+	  }
+ });
+ 
+  $('#btres').on('tap', function(){
+	 if ($(this).hasClass('elementoCorrecto'))
+	  {
+		alert ("tres");  
+	  }
+ });*/
 
 $('.boton').on('tap', function(){
    
