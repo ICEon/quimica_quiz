@@ -131,7 +131,9 @@ function otrosElementos()
 
 $('.boton').on('tap', function(){
 	
-    pulsado = 1;	alert ("pulsado " + pulsado); 
+    pulsado = 1;	
+	
+	//alert ("pulsado " + pulsado); 
  });
 
  function animarCaida(){
@@ -143,12 +145,14 @@ $('.boton').on('tap', function(){
   $("#tablero span")
   //.css({top:0,position:'relative'})
   .animate({top: alto*.80}, velocidad, function() {
-	  
+    if (pulsado==1)
+	 {
+		 alert ("pulsado");
+	 }
   });
-   if (pulsado==1)
-    {
-	 alert ("pulsado");	
-	}
+
+
+
  }//animar caida
  
  
