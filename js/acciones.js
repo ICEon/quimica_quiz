@@ -1,7 +1,7 @@
 // JavaScript Document
  
 $(document).ready(function(e) {
-var pulsado =0;
+var pulsado ="";
 var	ancho = $('#principal').width();	 
 var	alto = $('body').height();	
 var    velocidad = 2800 -(alto*.4);
@@ -124,17 +124,26 @@ function otrosElementos()
  }
 
  $('#btncontinuar').on('tap', function (){
-  pulsado=0;
+  pulsado="";
   $("#quien").popup("close",{transition: "flip"});
  animarCaida();
  });
 
 $('.boton').on('tap', function(){
 	
-    pulsado = 1;	
+    pulsado = $(this).attr('id');
 	
 	//alert ("pulsado " + pulsado); 
  });
+ 
+ function revisar()
+  {
+	if (pulsado!="")
+	 {
+		alert (pulsado); 
+	 }
+  }
+ 
 
  function animarCaida(){
   //	alert (velocidad); 	 
@@ -145,10 +154,8 @@ $('.boton').on('tap', function(){
   $("#tablero span")
   //.css({top:0,position:'relative'})
   .animate({top: alto*.80}, velocidad, function() {
-    if (pulsado==1)
-	 {
-		 alert ("pulsado");
-	 }
+    revisar();
+	 
   });
 
 
