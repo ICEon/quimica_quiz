@@ -85,7 +85,13 @@ $('#btnacierto').on('tap', function(){
     
    alert (elementoEncontrar + " "+otroElemento1 + " " +otroElemento2);
 
-
+   db.transaction(function(tx) {
+        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + elementoEncontrar + ";", [], function(tx, res) {
+			
+			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
+			
+        });
+      });
    
 
   
