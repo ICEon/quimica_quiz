@@ -136,7 +136,7 @@ function otrosElementos()
 
 $('.boton').on('tap', function(){
 
-   if ($(this).hasClass('boton'))
+   if ($(this).hasClass('elementoCorrecto'))
     {
     pulsado = $(this).attr('id');
 	}
