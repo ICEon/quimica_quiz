@@ -92,7 +92,21 @@ $('#btnacierto').on('tap', function(){
 			
         });
       });
-   
+      db.transaction(function(tx) {
+        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento1 + ";", [], function(tx, res) {
+			$("#" + azar.opcion[donde].dos).html(res.rows.item(0).simboloElemento);
+			
+        });
+      });
+
+
+   db.transaction(function(tx) {
+        tx.executeSql("select simboloElemento from elementos where numeroAtomico = " + otroElemento2 + ";", [], function(tx, res) {
+			$("#" + azar.opcion[donde].tres).html(res.rows.item(0).simboloElemento);
+			
+        });
+      });
+
 
   
   
