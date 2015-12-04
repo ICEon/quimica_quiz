@@ -95,6 +95,7 @@ $('#btnacierto').on('tap', function(){
 			
 			$("#" + azar.opcion[donde].uno).html(res.rows.item(0).simboloElemento);
 			$("#b" + azar.opcion[donde].uno).addClass('elementoCorrecto');
+			alert ($("#b" + azar.opcion[donde].uno).attr('id'));
 			
         });
       });
@@ -134,7 +135,7 @@ function otrosElementos()
  });
 
 $('.boton').on('tap', function(){
-	alert ($(this).attr('class'));
+
    if ($(this).hasClass('boton'))
     {
     pulsado = $(this).attr('id');
