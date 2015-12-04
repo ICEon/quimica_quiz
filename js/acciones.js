@@ -122,8 +122,11 @@ function otrosElementos()
  }
 
  $('#continuar').on('tap', function (){
+	 alert ("close");
   $("#quien").popup("close",{transition: "flip"});
  });
+
+
 
  $('.boton').on('tap', function(){
   //	alert (velocidad); 	 
